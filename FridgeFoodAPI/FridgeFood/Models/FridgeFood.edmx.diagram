@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0e49e2629e6843bdb509e128a9d9c386" Name="Diagram1" ZoomLevel="91">
+        <EntityTypeShape EntityType="FridgefoodModel.Fridge" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FridgefoodModel.Ingredient" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FridgefoodModel.Recipe" Width="1.5" PointX="2.875" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FridgefoodModel.Stock" Width="1.5" PointX="8.5" PointY="0.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="FridgefoodModel.sysdiagram" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FridgefoodModel.User" Width="1.5" PointX="6.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FridgefoodModel.ShoppingList" Width="1.5" PointX="8.75" PointY="3.625" />
+        <EntityTypeShape EntityType="FridgefoodModel.FridgeUser" Width="1.5" PointX="0.875" PointY="2.75" />
+        <EntityTypeShape EntityType="FridgefoodModel.FridgeItem" Width="1.625" PointX="2.75" PointY="2.5" />
+        <EntityTypeShape EntityType="FridgefoodModel.Item" Width="1.5" PointX="4.875" PointY="3.5" />
+        <EntityTypeShape EntityType="FridgefoodModel.ConsumptionLog" Width="1.5" PointX="2.5" PointY="6.25" />
+        <EntityTypeShape EntityType="FridgefoodModel.Bin" Width="1.5" PointX="5.375" PointY="6.75" />
+        <EntityTypeShape EntityType="FridgefoodModel.RecipeNotification" Width="1.5" PointX="7.375" PointY="7.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

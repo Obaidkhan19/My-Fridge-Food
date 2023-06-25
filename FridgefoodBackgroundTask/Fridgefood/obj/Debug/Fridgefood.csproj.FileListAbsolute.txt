@@ -1,0 +1,11 @@
+D:\BS IT\7 SEMESTER\FYP 1\Api\JOB PROGRAM\Fridgefood\Fridgefood\bin\Debug\Fridgefood.exe.config
+D:\BS IT\7 SEMESTER\FYP 1\Api\JOB PROGRAM\Fridgefood\Fridgefood\bin\Debug\Fridgefood.exe
+D:\BS IT\7 SEMESTER\FYP 1\Api\JOB PROGRAM\Fridgefood\Fridgefood\bin\Debug\Fridgefood.pdb
+D:\BS IT\7 SEMESTER\FYP 1\Api\JOB PROGRAM\Fridgefood\Fridgefood\bin\Debug\EntityFramework.dll
+D:\BS IT\7 SEMESTER\FYP 1\Api\JOB PROGRAM\Fridgefood\Fridgefood\bin\Debug\EntityFramework.SqlServer.dll
+D:\BS IT\7 SEMESTER\FYP 1\Api\JOB PROGRAM\Fridgefood\Fridgefood\bin\Debug\EntityFramework.xml
+D:\BS IT\7 SEMESTER\FYP 1\Api\JOB PROGRAM\Fridgefood\Fridgefood\bin\Debug\EntityFramework.SqlServer.xml
+D:\BS IT\7 SEMESTER\FYP 1\Api\JOB PROGRAM\Fridgefood\Fridgefood\obj\Debug\Fridgefood.csproj.CoreCompileInputs.cache
+D:\BS IT\7 SEMESTER\FYP 1\Api\JOB PROGRAM\Fridgefood\Fridgefood\obj\Debug\Fridgefood.csproj.CopyComplete
+D:\BS IT\7 SEMESTER\FYP 1\Api\JOB PROGRAM\Fridgefood\Fridgefood\obj\Debug\Fridgefood.exe
+D:\BS IT\7 SEMESTER\FYP 1\Api\JOB PROGRAM\Fridgefood\Fridgefood\obj\Debug\Fridgefood.pdb

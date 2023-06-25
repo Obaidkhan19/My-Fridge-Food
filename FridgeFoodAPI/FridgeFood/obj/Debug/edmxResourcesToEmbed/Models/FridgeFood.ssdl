@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="FridgefoodModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Bin">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quantity" Type="float" />
+    <Property Name="QuantityUnit" Type="varchar" MaxLength="50" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="FridgeItemId" Type="int" />
+    <Property Name="FridgeId" Type="int" />
+    <Property Name="Label" Type="varchar" MaxLength="50" />
+    <Property Name="PurchaseDate" Type="date" />
+    <Property Name="ExpiryDate" Type="date" />
+    <Property Name="IsFrozen" Type="bit" />
+  </EntityType>
+  <EntityType Name="ConsumptionLog">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LogData" Type="varchar(max)" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="Quantity" Type="float" />
+    <Property Name="QunatityUnit" Type="varchar" MaxLength="50" />
+    <Property Name="FridgeItemId" Type="int" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="FridgeId" Type="int" />
+  </EntityType>
+  <EntityType Name="Fridge">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="ConnectionId" Type="varchar" MaxLength="100" />
+    <Property Name="AllDailyConsumption" Type="bit" />
+    <Property Name="FreezerType" Type="int" />
+  </EntityType>
+  <EntityType Name="FridgeItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Image" Type="varchar(max)" />
+    <Property Name="ItemUnit" Type="varchar" MaxLength="50" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="FreezingTime" Type="int" />
+    <Property Name="FridgeTime" Type="int" />
+    <Property Name="ExpiryReminder" Type="int" />
+    <Property Name="LowStockReminder" Type="float" />
+    <Property Name="LowStockReminderUnit" Type="varchar" MaxLength="50" />
+    <Property Name="DailyConsumption" Type="float" />
+    <Property Name="DailyConsumptionUnit" Type="varchar" MaxLength="50" />
+    <Property Name="FridgeId" Type="int" />
+    <Property Name="ItemId" Type="int" />
+  </EntityType>
+  <EntityType Name="FridgeUser">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FridgeId" Type="int" />
+    <Property Name="UserId" Type="int" />
+    <Property Name="Role" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Ingredient">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Quantity" Type="float" />
+    <Property Name="Unit" Type="varchar" MaxLength="50" />
+    <Property Name="FridgeItemId" Type="int" />
+    <Property Name="RecipeId" Type="int" />
+  </EntityType>
+  <EntityType Name="Item">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Image" Type="varchar(max)" />
+    <Property Name="Category" Type="varchar" MaxLength="50" />
+    <Property Name="FreezingTime" Type="int" />
+    <Property Name="FridgeTime" Type="int" />
+    <Property Name="ItemUnit" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Recipe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Image" Type="varchar(max)" />
+    <Property Name="Servings" Type="int" />
+    <Property Name="FridgeId" Type="int" />
+  </EntityType>
+  <EntityType Name="RecipeNotification">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar(max)" />
+    <Property Name="Body" Type="varchar(max)" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="MealDate" Type="datetime" />
+    <Property Name="MealTime" Type="varchar" MaxLength="50" />
+    <Property Name="Reply" Type="varchar" MaxLength="50" />
+    <Property Name="SenderId" Type="int" />
+    <Property Name="RecieverId" Type="int" />
+    <Property Name="FridgeId" Type="int" />
+    <Property Name="RecipeId" Type="int" />
+  </EntityType>
+  <EntityType Name="ShoppingList">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Header" Type="varchar" MaxLength="500" />
+    <Property Name="Body" Type="varchar" MaxLength="500" />
+    <Property Name="Date" Type="datetime" />
+    <Property Name="FridgeId" Type="int" />
+    <Property Name="SenderId" Type="int" />
+    <Property Name="ReplierId" Type="int" />
+    <Property Name="FridgeItemId" Type="int" />
+  </EntityType>
+  <EntityType Name="Stock">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Label" Type="varchar" MaxLength="50" />
+    <Property Name="Quantity" Type="float" />
+    <Property Name="QuantityUnit" Type="varchar" MaxLength="50" />
+    <Property Name="PurchaseDate" Type="date" />
+    <Property Name="ExpiryDate" Type="date" />
+    <Property Name="IsFrozen" Type="bit" />
+    <Property Name="FridgeItemId" Type="int" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Password" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityContainer Name="FridgefoodModelStoreContainer">
+    <EntitySet Name="Bin" EntityType="Self.Bin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ConsumptionLog" EntityType="Self.ConsumptionLog" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Fridge" EntityType="Self.Fridge" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FridgeItem" EntityType="Self.FridgeItem" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="FridgeUser" EntityType="Self.FridgeUser" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Ingredient" EntityType="Self.Ingredient" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Item" EntityType="Self.Item" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Recipe" EntityType="Self.Recipe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="RecipeNotification" EntityType="Self.RecipeNotification" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ShoppingList" EntityType="Self.ShoppingList" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Stock" EntityType="Self.Stock" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
